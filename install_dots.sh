@@ -5,9 +5,9 @@
 
 (
 cp ~/Dotfiles/{.bashrc,.bash_aliases} ~/
+exec bash
 rm -rf ~/Dotfiles
 c
-exec bash
 echo "Done!"
 )
 
