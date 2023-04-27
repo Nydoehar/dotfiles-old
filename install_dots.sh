@@ -4,8 +4,7 @@
 # chmod +x Install_dots.sh
 
 (
-cd ~/Dotfiles
-cp .bashrc .bash_aliases ~/
+cp ~/Dotfiles/{.bashrc,.bash_aliases} ~/
 rm -rf ~/Dotfiles
 exec bash
 c
