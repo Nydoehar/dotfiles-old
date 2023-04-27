@@ -5,6 +5,10 @@
 
 (cd ~/Dotfiles
 cp .bashrc .bash_aliases ~/
-rm -rf ~/Dotfiles)
+rm -rf ~/Dotfiles
+exec bash
+clear 
+c)
+
 
 
