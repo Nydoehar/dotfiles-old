@@ -67,6 +67,7 @@ alias awesome2='rm -r ~/.config/awesome/* && cp "/mnt/STORAGE/MY STUFF/PC/Linux_
 
 ### RARELY USED ### 
 
+alias sysinfo='inxi -c 0 -ACdGMNSz'
 alias gpu='nvidia-smi --query-gpu=name --format=csv,noheader'
 alias kernel='uname -r'
 alias umount='sudo umount -l'
