@@ -7,8 +7,6 @@ cp ~/dotfiles/.bashrc ~/dotfiles/.bash_aliases-wsl ~/
 mv ~/.bash_aliases-wsl .bash_aliases
 rm -rf ~/dotfiles
 exec bash
-echo "Done!"
-sleep 2
 c
 )
 
