@@ -31,6 +31,8 @@ alias umount='sudo umount -l'
 alias ntfs='sudo mount -t ntfs'
 alias iso='sudo mount -o loop'
 
+alias sysinfo='inxi -c 0 -ACdGMNSz'
+
 alias vlca='"/mnt/c/Program Files/VideoLAN/VLC/vlc.exe"'
 
 vlc() {
