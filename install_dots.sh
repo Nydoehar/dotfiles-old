@@ -6,8 +6,6 @@
 cp ~/dotfiles/.bashrc ~/dotfiles/.bash_aliases ~/
 rm -rf ~/dotfiles
 exec bash
-echo "Done!"
-sleep 2
 c
 )
 
