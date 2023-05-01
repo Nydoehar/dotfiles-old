@@ -5,11 +5,11 @@ alias cs='clear && ls --color=auto -ASsh && exec bash' #List files, bigger to sm
 alias a='cd .. && c'
 alias e='exit'
 
-#d() {
-#	cd "$1" && c
-#}
-
 d() {
+	cd "$1" && c
+}
+
+go() {
   folder_tofind=$(find . -maxdepth 1 -type d -iname "*$1*" | head -n 1)
   cd "$folder_tofind"
   c
@@ -65,8 +65,7 @@ alias dotawesome='d ~/.config/awesome/'
 alias awesome1='cp ~/.config/awesome/rc.lua ~/.config/awesome/theme.lua "/mnt/STORAGE/MY STUFF/PC/Linux_DotFiles/AwesomeWM"'
 alias awesome2='rm -r ~/.config/awesome/* && cp "/mnt/STORAGE/MY STUFF/PC/Linux_DotFiles/AwesomeWM/"* ~/.config/awesome/'
 
-### RARELY USED ### 
-
+# RARELY USED
 alias sysinfo='inxi -c 0 -ACdGMNSz'
 alias gpu='nvidia-smi --query-gpu=name --format=csv,noheader'
 alias kernel='uname -r'
@@ -83,8 +82,7 @@ iso() {
   uiso
 }
 
-### SAVE SCUMMING ###
-
+# SAVE SCUMMING
 alias ds2='d "/mnt/LINUX_STORAGE/Lutris/dark-souls-ii/drive_c/users/yann/AppData/Roaming/DarkSoulsII/0110000100001337/"'
 
 dark1() (
@@ -103,8 +101,7 @@ dark2() (
   mv "$1"-DARKSII0000.sl2 DARKSII0000.sl2
 )
 
-### PLAY VIDEO ###
-
+# PLAY VIDEO
 play() { 
   #cd "/mnt/d/MY STUFF/MEDIA/Videos"
   video_file=$(find . -type f -iname "*$1*$2*.mp4" -o -iname "*$2*$1*.mp4" -o -iname "*$1*$2*.mkv" -o -iname "*$2*$1*.mkv" | head -n 1)
@@ -113,8 +110,7 @@ play() {
   c
 }
 
-### DELETE ALL FILES CONTAIING THE SEARCHED TERM ###
-
+# DELETE ALL FILES CONTAIING THE SEARCHED TERM
 delete() {
 	echo 
 	find . -wholename "*$1*"
@@ -131,6 +127,3 @@ delete() {
     c
 	fi
 }
-
-### RARELY USED ###
-
