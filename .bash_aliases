@@ -1,6 +1,6 @@
 ### MY ALIASES ###
 
-alias c='clear && ls --color=auto -Ash && exec bash'
+alias c='clear && ls --color=auto -Ash && echo "Files: $(ls | wc -l)" && exec bash'
 alias cs='clear && ls --color=auto -ASsh && exec bash' #List files, bigger to smaller.
 alias a='cd .. && c'
 alias e='exit'
