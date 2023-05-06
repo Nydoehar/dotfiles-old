@@ -1,6 +1,6 @@
 alias off='shutdown.exe /t 0'
 
-alias c='clear && ls --color=auto -Ash && exec bash'
+alias c='clear && ls --color=auto -Ash && echo "Files: $(ls | wc -l)" && exec bash'
 alias cs='clear && ls --color=auto -ASsh && exec bash'
 alias a='cd .. && c'
 alias e='exit'
