@@ -119,20 +119,17 @@ play() {
 
 ### DELETE ALL FILES CONTAIING THE GIVEN TERM 
 # E.g: delete piece < deletes all files containing the word 'piece'.
-
 delete() {
-	echo 
-	find . -wholename "*$1*"
-	echo
+  echo
+  find . -iname "*$1*" -print
 
   read -p $'Remove? [y/N]: ' -n 1 -r
+  echo
 
   if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-    find . -wholename "*$1*" -delete
-	  c
+  then
+    find . -iname "*$1*" -delete
+  fi
 
-  else
-    c
-	fi
+  clear && ls --color=auto -Ash && exec bash
 }
