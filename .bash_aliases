@@ -113,7 +113,7 @@ play() {
   celluloid "$video_file"
   c
   # Usage: play "WORD1" or play WORD1-WORD2"
-  # E.g play one 05 < plays episode 05 of one piece.
+  # E.g. play one 05 < plays episode 05 of one piece.
 }
 
 # DELETE FILES
@@ -131,7 +131,7 @@ delete() {
 
   clear && ls --color=auto -Ash && exec bash
   # Usage: delete "TERM-YOU-WANT"
-  # delete one < find all files and folders with the name 'one'.
+  # E.g. Delete one < find all files and folders containing 'one' in its name.
 }
 
 # DISTROBOX
