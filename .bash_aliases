@@ -12,6 +12,8 @@ go() {
   folder_tofind=$(find . -maxdepth 1 -type d -iname "*$1*" | head -n 1)
   cd "$folder_tofind"
   c
+  # Usage: enters the folder containing the TERM you entered.
+  # Usage: go dung < enters the folder Dungeons and Dragons.
 }
 
 o() {
