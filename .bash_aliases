@@ -64,13 +64,12 @@ alias awesome1='cp ~/.config/awesome/rc.lua ~/.config/awesome/theme.lua "/mnt/ST
 alias awesome2='rm -r ~/.config/awesome/* && cp "/mnt/STORAGE/MY STUFF/PC/Linux_DotFiles/AwesomeWM/"* ~/.config/awesome/'
 
 ### RARELY USED 
-
-alias tree='tree -dL 3 ' 
-#Needs to install 'tree' package. 
-
 alias sysinfo='inxi -c 0 -ACdGMNSz'
 alias gpu='nvidia-smi --query-gpu=name --format=csv,noheader'
 alias kernel='uname -r'
+
+alias tree='tree -dL 3 ' 
+#Needs to install 'tree' package. 
 
 alias umount='sudo umount -l'
 alias ntfs='sudo mount -t ntfs'
