@@ -26,7 +26,6 @@ alias off='sudo shutdown now'
 alias restart='sudo shutdown -r now'
 alias suspend='systemctl suspend'
 
-
 nv() {
 	nvim "$1" && c 
 }
