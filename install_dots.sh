@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Make script executable < chmod +x Install_dots.sh
+# Make script executable < chmod +x install_dots.sh
 
 (
 cp ~/dotfiles/.bashrc ~/dotfiles/.bash_aliases ~/
