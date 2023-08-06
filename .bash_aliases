@@ -37,33 +37,37 @@ alias dh='nv ~/.bash_history && c'
 alias da='nv ~/.bash_aliases && c' 
 alias dr='nv ~/.bashrc' 
 
-alias ds='nv /mnt/STORAGE/MY\ STUFF/MISC/Dark_Souls-Video_Ideas.txt'
+alias ds='nv /mnt/HDD-1/MY_STUFF/MISC/Dark_Souls-Video_Ideas.txt'
 
-# FOLDERS
+  # FOLDERS
 alias home='cd ~/ && c'
-alias stuff='cd /mnt/STORAGE/MY\ STUFF/ && c'
-alias media='cd /mnt/STORAGE/MY\ STUFF/MEDIA/ && c'
-alias misc='cd /mnt/STORAGE/MY\ STUFF/MISC/ && c'
-alias porn='cd /mnt/STORAGE/MY\ STUFF/MEDIA/Porn/Videos/ && c'
-alias videos='cd /mnt/STORAGE/MY\ STUFF/MEDIA/Videos/ && c'
-alias linuxs='cd /mnt/LINUX_STORAGE/ && c'
+alias stuff='cd /mnt/HDD-1/MY_STUFF/ && c'
 
-alias games='cd /mnt/STORAGE/MY\ STUFF/GAMES/ && c'
-alias others='cd /mnt/STORAGE/MY\ STUFF/GAMES/_Others && c'
-alias torrents='cd /mnt/STORAGE/MY\ STUFF/GAMES/_Others/_Torrents && c'
-alias steam='cd /mnt/STORAGE/MY\ STUFF/GAMES/Steam/steamapps/common && c'
+alias books='cd /mnt/HDD-1/MY_STUFF/BOOKS/ && c'
+alias comics='cd /mnt/HDD-1/MY_STUFF/BOOKS/1-Comics && c'
+alias ebooks='cd /mnt/HDD-1/MY_STUFF/BOOKS/2-Ebooks && c'
+alias mangas='cd /mnt/HDD-1/MY_STUFF/BOOKS/3-Mangas && c'
 
-alias pc='cd /mnt/STORAGE/MY\ STUFF/PC/ && c'
-alias coding='cd /mnt/STORAGE/MY\ STUFF/PC/Coding/Visual\ Studio\ Code && c'
-alias scripts='cd /mnt/STORAGE/MY\ STUFF/PC/Linux_Scripts && c'
+alias games='cd /mnt/HDD-1/MY_STUFF/GAMES/ && c'
+alias torrents='cd /mnt/HDD-1/MY_STUFF/GAMES/1-Installation_Files/ && c'
+alias installed='cd /mnt/NVME-1/GAMES/My_Games/ && c'
 
-alias editing='cd /mnt/STORAGE/MY\ STUFF/VIDEO\ EDITING/ && c'
-alias captures='cd /mnt/STORAGE/MY\ STUFF/VIDEO\ EDITING/Captures && c'
-alias converted='cd /mnt/STORAGE/MY\ STUFF/VIDEO\ EDITING/Converted\ Videos && c'
+alias misc='cd /mnt/HDD-1/MY_STUFF/MISC/ && c'
+alias notes='cd /mnt/HDD-1/MY_STUFF/MISC/Vim && c'
 
-alias dotawesome='d ~/.config/awesome/'
-alias awesome1='cp ~/.config/awesome/rc.lua ~/.config/awesome/theme.lua "/mnt/STORAGE/MY STUFF/PC/Linux_DotFiles/AwesomeWM"'
-alias awesome2='rm -r ~/.config/awesome/* && cp "/mnt/STORAGE/MY STUFF/PC/Linux_DotFiles/AwesomeWM/"* ~/.config/awesome/'
+alias pc='cd /mnt/HDD-1/MY_STUFF/PC/ && c'
+alias apps='cd /mnt/HDD-1/MY_STUFF/PC/2-Softwares/ && c'
+
+alias videos='cd /mnt/HDD-1/MY_STUFF/VIDEOS/ && c'
+alias animes='cd /mnt/HDD-1/MY_STUFF/VIDEOS/1-Animes/ && c'
+alias movies='cd /mnt/HDD-1/MY_STUFF/VIDEOS/2-Movies/ && c'
+alias shows='cd /mnt/HDD-1/MY_STUFF/VIDEOS/3-TV_Shows/ && c'
+alias porn='cd /mnt/HDD-1/MY_STUFF/VIDEOS/4-Porn/2-Videos/ && c'
+
+alias sonic='cd /mnt/NVME-1/ && c'
+
+alias send='(cd /mnt/HDD-1/MY_STUFF/PC/2-Softwares/ && ./LocalSend-1.10.0-linux-x86-64.AppImage)'
+alias sync='(cd /var/lib/flatpak/app/me.kozec.syncthingtk/x86_64/stable/79c7a115c5a9d0744022bf088039e2b76946ead5afdf2280a80fa811056f67f5/files/bin && ./syncthing)'
 
 ### RARELY USED 
 alias sysinfo='inxi -c 0 -ACdGMNSz'
@@ -112,14 +116,14 @@ dark2() (
 # PLAY VIDEO
 play() { 
   video_file=$(find . -type f -iname "*$1*$2*.mp4" -o -iname "*$2*$1*.mp4" -o -iname "*$1*$2*.mkv" -o -iname "*$2*$1*.mkv" | head -n 1)
-  celluloid "$video_file"
+  totem "$video_file"
   c
   # Usage: play "WORD1" or play WORD1-WORD2"
   # E.g. play one 05 < plays episode 05 of one piece.
 }
 
 # DELETE FILES
-delete() {
+del() {
   echo
   find . -iname "*$1*" -print
 
@@ -128,7 +132,8 @@ delete() {
 
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
-    find . -iname "*$1*" -delete
+   #find . -iname "*$1*" -delete
+   find . -iname "*$1*" -exec rm -rf {} \;
   fi
 
   clear && ls --color=auto -Ash && exec bash
