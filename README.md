@@ -1,4 +1,8 @@
-# Dotfiles
+  # Debian 12 post installation
+sudo apt update && sudo apt install -y git && git clone https://github.com/Nydoehar/dotfiles/ && bash ~/dotfiles/exec_post_install.sh  
+
+
+  # Dotfiles
 The commands below replace the dotfiles on the machine by the dotfiles stored on github.
 
   # VirtManager
