@@ -3,26 +3,26 @@
 # Script to setup a new Debian 12 installation.
 
 sudo apt upgrade -y \
-echo \
+echo 
 echo "Upgrade" \
-echo \
+echo 
 sudo apt purge -y thunderbird firefox \
-echo \
+echo 
 echo "Purge" \
-echo \
+echo 
 sudo apt install -y gufw neovim timeshift brave-browser \
-echo \
+echo 
 echo "Install" \
-echo \
+echo 
 sudo apt autoremove -y \
-echo \
+echo 
 echo "Autoremove" \
-echo \
-sudo ufw enable \
-echo \
+echo 
+#sudo ufw enable \
+echo 
 echo "Enable" \
-echo \
+echo 
 sudo ufw status verbose \
-echo \
+echo 
 echo "Verbose" \
-echo \
+echo 
