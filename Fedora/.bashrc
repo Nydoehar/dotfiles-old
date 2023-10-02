@@ -62,31 +62,9 @@ ex ()
   fi
 }
 
-# MY PATHS
-export home=~/
-export stuff="/mnt/STORAGE/MY STUFF/"
-export media="/mnt/STORAGE/MY STUFF/MEDIA/"
-export misc="/mnt/STORAGE/MY STUFF/MISC/"
-export porn="/mnt/STORAGE/MY STUFF/MEDIA/Porn/Videos/"
-export videos="/mnt/STORAGE/MY STUFF/MEDIA/Videos/"
-export linuxs="/mnt/LINUX_STORAGE/"
-
-export games="/mnt/STORAGE/MY STUFF/GAMES/"
-export others="/mnt/STORAGE/MY STUFF/GAMES/_Others"
-export torrents="/mnt/STORAGE/MY STUFF/GAMES/_Others/_Torrents"
-export steam="/mnt/STORAGE/MY STUFF/GAMES/Steam/steamapps/common"
-
-export pc="/mnt/STORAGE/MY STUFF/PC/"
-export coding="/mnt/STORAGE/MY STUFF/PC/Coding/Visual Studio Code"
-export scripts="/mnt/STORAGE/MY STUFF/PC/Linux_Scripts"
-export nobara="/mnt/STORAGE/MY STUFF/PC/Linux_Scripts/Nobara Project"
-
-export editing="/mnt/STORAGE/MY STUFF/VIDEO EDITING/"
-export captures="/mnt/STORAGE/MY STUFF/VIDEO EDITING/Captures"
-export converted="/mnt/STORAGE/MY STUFF/VIDEO EDITING/Converted Videos"
-
+# Don't save terminal history
 set +o history
 
+# Edit terminal commands through vim 
+# How to: type command < Esc < v | To get out: wq
 set -o vi
-
-export PATH="$/mnt/STORAGE/MY STUFF/PC/Softwares/platform-tools:$PATH"
