@@ -6,7 +6,7 @@
 cp ~/dotfiles/.bashrc ~/dotfiles/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
 cp ~/dotfiles/init.lua ~/.config/nvim/
-bash ~/dotfiles/post_installation.sh
+bash ~/dotfiles/debian_installation_script.sh
 rm -rf ~/dotfiles
 exec bash
 c
