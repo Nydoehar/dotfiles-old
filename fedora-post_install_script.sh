@@ -15,6 +15,9 @@ exec bash
 #c
 )
 
+timedatectl set-ntp true 
+timedatectl set-local-rtc 1 --adjust-system-clock
+
 sudo dnf upgrade -y && \
 sudo dnf remove -y thunderbird firefox && \
 sudo dnf install -y neovim timeshift && \
