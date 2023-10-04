@@ -1,3 +1,0 @@
-#!/bin/bash
-  
-bash /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/play.sh $1 $2
