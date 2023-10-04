@@ -8,6 +8,7 @@ mv ~/debian-bash_aliases ~/.bash_aliases
 mkdir -p ~/.config/nvim/
 cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
+cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 exec bash
