@@ -8,6 +8,7 @@ mv ~/fedora-bash_aliases ~/.bash_aliases
 mkdir -p ~/.config/nvim/
 cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
+mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
@@ -18,9 +19,9 @@ exec bash
 timedatectl set-ntp true 
 timedatectl set-local-rtc 1 --adjust-system-clock
 
-sudo dnf upgrade -y
-sudo dnf remove -y thunderbird firefox
-sudo dnf install -y neovim timeshift
+yes | sudo dnf upgrade 
+sudo dnf remove -y thunderbird firefox && \
+sudo dnf install -y neovim timeshift && \
 
 # Brave Browser start
 sudo dnf install dnf-plugins-core
