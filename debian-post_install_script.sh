@@ -2,7 +2,6 @@
 
 # Script to setup a new Debian 12 installation.
 
-(
 cp ~/dotfiles/.bashrc ~/dotfiles/debian-bash_aliases ~/
 mv ~/debian-bash_aliases ~/.bash_aliases
 mkdir -p ~/.config/nvim/
@@ -11,9 +10,6 @@ mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
-exec bash
-#c
-)
 
 timedatectl set-ntp true 
 timedatectl set-local-rtc 1 --adjust-system-clock
