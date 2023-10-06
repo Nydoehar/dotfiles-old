@@ -63,8 +63,8 @@ ex ()
 }
 
 # Don't save terminal history
-set +o history
+# set +o history
 
-# Edit terminal commands through vim 
-# How to: type command < Esc < v | To get out: wq
+# Edit commands in the terminal using Vim
+# How to: Esc < v | To get out: wq
 set -o vi
