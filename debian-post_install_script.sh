@@ -15,7 +15,7 @@ timedatectl set-ntp true
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo apt upgrade -y
-sudo apt purge -y thunderbird firefox
+sudo apt purge -y thunderbird
 sudo apt install -y gufw neovim timeshift brave-browser
 sudo apt autoremove -y
 sudo ufw enable
