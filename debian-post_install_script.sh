@@ -20,8 +20,7 @@ sudo apt purge -y thunderbird
 sudo apt install -y gufw neovim timeshift node-typescript make
 
 git clone https://github.com/pop-os/shell.git
-cd shell
-yes | make local-install
+(cd shell && yes | make local-install)
 
 sudo apt autoremove -y
 sudo ufw enable
