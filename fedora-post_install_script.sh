@@ -16,7 +16,7 @@ timedatectl set-ntp true
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
-sudo dnf remove -y thunderbird firefox
+sudo dnf remove -y thunderbird
 sudo dnf install -y neovim timeshift
 
 # Brave Browser start
