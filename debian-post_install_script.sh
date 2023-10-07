@@ -9,6 +9,9 @@ cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
+(cd ~/.local/bin/ && chmod +x *)
+mv ~/dotfiles/debian-sources.list ~/dotfiles/sources.list
+sudo cp ~/dotfiles/sources.list /etc/apt/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
