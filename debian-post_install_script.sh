@@ -18,9 +18,10 @@ rm -rf ~/dotfiles
 timedatectl set-ntp true 
 timedatectl set-local-rtc 1 --adjust-system-clock
 
+sudo apt update
 sudo apt upgrade -y
 sudo apt purge -y thunderbird
-sudo apt install -y vlc gufw neovim timeshift node-typescript make
+sudo apt install -y gufw nvidia-driver firmware-misc-nonfree vlc neovim timeshift node-typescript make
 
 git clone https://github.com/pop-os/shell.git
 (cd shell && yes | make local-install)
