@@ -20,7 +20,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo apt upgrade -y
 sudo apt purge -y thunderbird
-sudo apt install -y gufw neovim timeshift node-typescript make
+sudo apt install -y vlc gufw neovim timeshift node-typescript make
 
 git clone https://github.com/pop-os/shell.git
 (cd shell && yes | make local-install)
