@@ -17,7 +17,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
 sudo dnf remove -y thunderbird
-sudo dnf install -y neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
+sudo dnf install -y vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
 
 sudo dnf autoremove -y
 systemctl status firewalld
