@@ -2,13 +2,16 @@
 
 # Script to setup a new Fedora installation.
 
-cp ~/dotfiles/.bashrc ~/dotfiles/fedora-bash_aliases ~/
-mv ~/fedora-bash_aliases ~/.bash_aliases
+cp ~/dotfiles/.bashrc ~/dotfiles/debian-bash_aliases ~/
+mv ~/debian-bash_aliases ~/.bash_aliases
 mkdir -p ~/.config/nvim/
 cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
+(cd ~/.local/bin/ && chmod +x *)
+mv ~/dotfiles/debian-sources.list ~/dotfiles/sources.list
+sudo cp ~/dotfiles/sources.list /etc/apt/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
@@ -17,7 +20,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
 sudo dnf remove -y thunderbird
-sudo dnf install -y vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
+sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
 
 sudo dnf autoremove -y
 systemctl status firewalld
