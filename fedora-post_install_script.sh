@@ -21,6 +21,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo dnf upgrade -y
 sudo dnf remove -y thunderbird
 sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
+flatpak install flathub com.brave.Browser
 
 sudo dnf autoremove -y
 systemctl status firewalld
