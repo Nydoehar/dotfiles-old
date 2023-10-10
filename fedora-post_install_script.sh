@@ -10,8 +10,8 @@ mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
-mv ~/dotfiles/debian-sources.list ~/dotfiles/sources.list
-sudo cp ~/dotfiles/sources.list /etc/apt/
+mkdir -p ~/.config/autostart
+mv ~/dotfiles/transmission-gtk.desktop ~/.config/autostart/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
@@ -21,7 +21,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo dnf upgrade -y
 sudo dnf remove -y thunderbird
 sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
-flatpak install flathub com.brave.Browser
+flatpak install flathub --user -y com.brave.Browser
 
 sudo dnf autoremove -y
 systemctl status firewalld
