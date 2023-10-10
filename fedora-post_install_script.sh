@@ -11,7 +11,7 @@ mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
 mkdir -p ~/.config/autostart
-mv ~/dotfiles/transmission-gtk.desktop ~/.config/autostart/
+mv ~/dotfiles/transmission-gtk.desktop ~/dotfiles/com.brave.Browser.desktop ~/.config/autostart/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
