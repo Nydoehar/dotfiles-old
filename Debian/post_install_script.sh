@@ -2,17 +2,18 @@
 
 # Script to setup a new Debian 12 installation.
 
-cp ~/dotfiles/.bashrc ~/dotfiles/debian-bash_aliases ~/
-mv ~/debian-bash_aliases ~/.bash_aliases
+cp ~/dotfiles/General/.bashrc ~/dotfiles/Debian/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
-cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
+cp ~/dotfiles/General/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
-mv ~/dotfiles/debian-sources.list ~/dotfiles/sources.list
-sudo cp ~/dotfiles/sources.list /etc/apt/
-(cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
+sudo cp ~/dotfiles/Debian/sources.list /etc/apt/
+(cd ~/dotfiles/General/ && dconf load / < Gnome_Settings-Full_Backup)
+cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
+cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/.mozilla ~/
 rm -rf ~/dotfiles
 
 timedatectl set-ntp true 
