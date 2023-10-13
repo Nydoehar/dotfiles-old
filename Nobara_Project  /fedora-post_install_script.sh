@@ -2,16 +2,16 @@
 
 # Script to setup a new Fedora installation.
 
-cp ~/dotfiles/.bashrc ~/dotfiles/debian-bash_aliases ~/
-mv ~/debian-bash_aliases ~/.bash_aliases
+cp ~/dotfiles/General/.bashrc ~/dotfiles/Nobara_Project/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
-cp ~/dotfiles/neovim-init.lua ~/.config/nvim/
+cp ~/dotfiles/General/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
+(cd ~/dotfiles/General/ && dconf load / < Gnome_Settings-Full_Backup)
 mkdir -p ~/.config/autostart
-mv ~/dotfiles/transmission-gtk.desktop ~/dotfiles/com.brave.Browser.desktop ~/.config/autostart/
+mv ~/dotfiles/.desktop_files/transmission-gtk.desktop ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
 (cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
