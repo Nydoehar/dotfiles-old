@@ -11,6 +11,8 @@ cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
 sudo cp ~/dotfiles/Debian/sources.list /etc/apt/
 (cd ~/dotfiles/General/ && dconf load / < Gnome_Settings-Full_Backup)
+mkdir -p ~/.config/autostart
+mv ~/dotfiles/.desktop_files/transmission-gtk.desktop ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
 rm -rf ~/dotfiles
 
 timedatectl set-ntp true 
