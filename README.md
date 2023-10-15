@@ -2,4 +2,4 @@
 sudo apt update -y && sudo apt install -y git && git clone https://github.com/Nydoehar/dotfiles/ && bash ~/dotfiles/debian-post_install_script.sh
 
   # Fedora post installation
-sudo dnf update -y && sudo dnf install -y git && git clone https://github.com/Nydoehar/dotfiles/ && bash ~/dotfiles/fedora-post_install_script.sh
+sudo dnf update -y && sudo dnf install -y git && git clone https://github.com/Nydoehar/dotfiles/ && bash ~/dotfiles/Nobara_Project/post_install_script.sh
