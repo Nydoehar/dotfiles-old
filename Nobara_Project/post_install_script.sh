@@ -10,9 +10,6 @@ mkdir -p ~/.local/bin
 cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
 (cd ~/dotfiles/General/ && dconf load / < Gnome_Settings-Full_Backup)
-mkdir -p ~/.config/autostart
-mv ~/dotfiles/.desktop_files/transmission-gtk.desktop ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
-(cd ~/dotfiles/ && dconf load / < Gnome_Settings-Full_Backup)
 rm -rf ~/dotfiles
 
 timedatectl set-ntp true 
@@ -22,6 +19,9 @@ sudo dnf upgrade -y
 sudo dnf remove -y thunderbird
 sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
 flatpak install flathub --user -y com.brave.Browser
+
+mkdir -p ~/.config/autostart
+mv ~/dotfiles/.desktop_files/transmission-gtk.desktop ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
 
 sudo dnf autoremove -y
 systemctl status firewalld
