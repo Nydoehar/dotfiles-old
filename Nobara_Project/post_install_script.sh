@@ -18,7 +18,7 @@ timedatectl set-ntp true
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
-sudo dnf remove -y thunderbird
+sudo dnf remove -y thunderbird firefox
 sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
 flatpak install flathub --user -y com.brave.Browser
 
@@ -33,7 +33,6 @@ flatpak run com.brave.Browser && killall brave
 
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
-cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/.mozilla ~/
 
 sudo su -c "echo ' ' >> /etc/fstab"
 sudo su -c "echo 'UUID=2B2F6B4529BC9532 /mnt/HDD-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
