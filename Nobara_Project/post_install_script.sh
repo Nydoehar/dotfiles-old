@@ -30,6 +30,8 @@ sudo mkdir /mnt/HDD-1 /mnt/NVME-1
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD-1
 sudo mount -t ntfs UUID=74A80C647FDD4806 /mnt/NVME-1
 
+flatpak run com.brave.Browser && killall brave
+
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/.mozilla ~/
