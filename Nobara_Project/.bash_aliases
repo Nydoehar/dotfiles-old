@@ -39,6 +39,8 @@ alias dh='nv ~/.bash_history && c'
 alias da='nv ~/.bash_aliases && c' 
 alias dr='nv ~/.bashrc' 
 
+alias back='cp -r ~/.config/transmission ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser _Dot_Files'
+
   # FOLDERS
 alias home='cd ~/ && c'
 alias stuff='cd /mnt/HDD-1/MY_STUFF/ && c'
