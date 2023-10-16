@@ -30,9 +30,9 @@ sudo mkdir /mnt/HDD-1 /mnt/NVME-1
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD-1
 sudo mount -t ntfs UUID=74A80C647FDD4806 /mnt/NVME-1
 
-cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
-cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
-cp /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/.mozilla ~/
+cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
+cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/.mozilla ~/
 
 sudo su -c "echo ' ' >> /etc/fstab"
 sudo su -c "echo 'UUID=2B2F6B4529BC9532 /mnt/HDD-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
