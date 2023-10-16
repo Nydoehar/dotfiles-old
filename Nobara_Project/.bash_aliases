@@ -68,7 +68,7 @@ alias porn='cd /mnt/HDD-1/MY_STUFF/VIDEOS/Porn/ && c'
 
 alias sonic='cd /mnt/NVME-1/ && c'
 
-alias brave='(xargs brave-browser < /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/URLs.txt &>/dev/null && c)'
+alias brave='(xargs flatpak run com.brave.Browser < /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/URLs.txt &>/dev/null && c)'
 alias mullvad='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/mullvad-browser/ && ./start-mullvad-browser.desktop)'
 alias send='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/ && ./LocalSend-1.10.0-linux-x86-64.AppImage)'
 alias sync='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/syncthing-linux-amd64-v1.23.6 && ./syncthing)'
