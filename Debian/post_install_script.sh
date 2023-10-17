@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to setup a new Debian 12 installation.
+# Script to fully configure a new Debian 12 installation to my liking.
 
 cp ~/dotfiles/General/.bashrc ~/dotfiles/Debian/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
@@ -35,8 +35,10 @@ sudo mount -t ntfs UUID=74A80C647FDD4806 /mnt/NVME-1
 cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/transmission ~/.config/
 #cp -r /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
-sudo su -c "echo ' ' >> /etc/fstab"
-sudo su -c "echo 'UUID=2B2F6B4529BC9532 /mnt/HDD-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
-sudo su -c "echo 'UUID=74A80C647FDD4806 /mnt/NVME-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
+cat /mnt/HDD-1/MY_STUFF/PC/_Dot_Files/fstab_lines | sudo tee -a /etc/fstab
+
+#sudo su -c "echo ' ' >> /etc/fstab"
+#sudo su -c "echo 'UUID=2B2F6B4529BC9532 /mnt/HDD-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
+#sudo su -c "echo 'UUID=74A80C647FDD4806 /mnt/NVME-1 ntfs uid=1000, gid =1000, rw,user, auto, exec 0 0' >> /etc/fstab"
 
 exec bash
