@@ -21,7 +21,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo apt update
 sudo apt upgrade -y
 sudo apt purge -y thunderbird firefox
-sudo apt install -y flatpak gnome-software-plugin-flatpak gufw nvidia-driver firmware-misc-nonfree vlc neovim timeshift node-typescript make
+sudo apt install -y flatpak gnome-software-plugin-flatpak gufw nvidia-driver firmware-misc-nonfree vlc neovim timeshift
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 git clone https://github.com/pop-os/shell.git
