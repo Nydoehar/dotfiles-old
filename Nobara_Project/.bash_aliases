@@ -70,6 +70,7 @@ alias porn='cd /mnt/HDD-1/MY_STUFF/VIDEOS/Porn/ && c'
 
 alias sonic='cd /mnt/NVME-1/ && c'
 
+alias back='(cd /mnt/HDD-1/MY_STUFF/PC/Dot_Files && rm -rf transmission Brave-Browser && cp -r ~/.config/transmission ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser .)'
 alias brave='(xargs flatpak run com.brave.Browser < /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/URLs.txt &>/dev/null && c)'
 alias mullvad='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/mullvad-browser/ && ./start-mullvad-browser.desktop)'
 alias send='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/ && ./LocalSend-1.10.0-linux-x86-64.AppImage)'
