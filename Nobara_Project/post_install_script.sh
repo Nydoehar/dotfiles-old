@@ -33,9 +33,7 @@ sudo mount -t ntfs UUID=74A80C647FDD4806 /mnt/NVME-1
 cat /mnt/HDD-1/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 
 flatpak run com.brave.Browser
-transmission-gtk
-
-wait 10
+transmission-gtk && wait 10
 
 cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/transmission ~/.config/
 cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
