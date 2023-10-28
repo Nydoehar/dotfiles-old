@@ -20,6 +20,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo dnf upgrade -y
 sudo dnf remove -y thunderbird firefox
 sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
+flatpak uninstall --unused
 flatpak install flathub --user -y com.brave.Browser
 
 sudo dnf autoremove -y
@@ -29,14 +30,12 @@ sudo mkdir /mnt/HDD-1 /mnt/NVME-1
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD-1
 sudo mount -t ntfs UUID=74A80C647FDD4806 /mnt/NVME-1
 
-flatpak run com.brave.Browser
-transmission-gtk
-killall brave
-killall transmission-gtk
+flatpak run com.brave.Browser & wait 5 && killall brave
+transmission-gtk & wait 5 && killall transmission-gtk
 
-cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/transmission ~/.config/
-cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/transmission ~/.config/ & echo "Copy Transmission files"
+cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/ & echo "Copying Brave files"
 
 cat /mnt/HDD-1/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 
-exect bash
+exec bash
