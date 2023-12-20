@@ -68,7 +68,12 @@ alias porn='cd /mnt/HDD-1/MY_STUFF/VIDEOS/Porn/ && c'
 
 alias sonic='cd /mnt/NVME-1/ && c'
 
+alias scripts='cd /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts && c'
+alias watch='(cd /mnt/HDD-1/MY_STUFF/VIDEOS/Animes/Jujutsu_Kaisen && play E886DF78) && (cd "/mnt/HDD-1/MY_STUFF/VIDEOS/Animes/Boku_no_Hero_Academia/My Hero Academia Season 5 (1080p CR Dual Audio WEB-DL -KS-)" && play S05E10) && (cd /mnt/HDD-1/MY_STUFF/VIDEOS/Animes/\[Judas\]\ Haikyuu\!\!\ \(Seasons\ 1-2\ +\ OADs\)\ \[BD\ 1080p\]\[HEVC\ x265\ 10bit\]\[Dual-Audio\]\[Eng-Subs\]/\[Judas\]\ Haikyuu\!\!\ -\ S1/ && play 06) && c'
+
+alias upwork='cd /mnt/HDD-1/MY_STUFF/MISC/Vim/Upwork && c'
 alias back='(cd /mnt/HDD-1/MY_STUFF/PC/Dot_Files && rm -rf transmission Brave-Browser && cp -r ~/.config/transmission ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser .)'
+alias settings='gnome-control-center'
 alias brave='(xargs flatpak run com.brave.Browser < /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/URLs.txt &>/dev/null && c)'
 alias mullvad='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/mullvad-browser/ && ./start-mullvad-browser.desktop)'
 alias send='(cd /mnt/HDD-1/MY_STUFF/PC/Softwares/ && ./LocalSend-1.10.0-linux-x86-64.AppImage)'
