@@ -69,6 +69,9 @@ alias shows='cd /mnt/HDD-1/MY_STUFF/VIDEOS/TV_Shows/ && c'
 alias porn='cd /mnt/HDD-1/MY_STUFF/VIDEOS/Porn/ && c'
 
 alias sonic='cd /mnt/NVME-1/ && c'
+alias scripts='cd /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts && c'
+alias watch='(cd "/mnt/HDD-1/MY_STUFF/VIDEOS/Animes/Mob_Psycho_100-Season_2" && vlc "[HorribleSubs] Mob Psycho 100 S2 - 09 [1080p].mkv") && (cd /mnt/HDD-1/MY_STUFF/VIDEOS/Animes/Goblin_Slayer-Season_2 && play EC43264C)'
+alias upwork='cd /mnt/HDD-1/MY_STUFF/MISC/Vim/Upwork && c'
 
 alias back='(cd /mnt/HDD-1/MY_STUFF/PC/Dot_Files && rm -rf transmission Brave-Browser && cp -r ~/.config/transmission ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser .)'
 alias brave='(xargs flatpak run com.brave.Browser < /mnt/HDD-1/MY_STUFF/PC/Bash/Scripts/URLs.txt &>/dev/null && c)'
