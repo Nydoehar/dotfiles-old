@@ -31,6 +31,6 @@ flatpak run com.brave.Browser
 transmission-gtk
 
 cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/transmission ~/.config/
-cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.config/BraveSoftware/
 
 exec bash
