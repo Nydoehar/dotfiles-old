@@ -19,7 +19,7 @@ sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 
-cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.config/BraveSoftware/
-#cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/transmission ~/.config/
+cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.config/BraveSoftware/
+#cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/transmission ~/.config/
 
 exec bash
