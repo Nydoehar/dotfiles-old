@@ -11,7 +11,7 @@ cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
 rm -rf ~/dotfiles
 
-yes | paru -S brave-bin vlc neovim timeshift 
+yes | paru -S brave-bin vlc neovim timeshift xfce4-appfinder
 
 sudo mkdir /mnt/HDD /mnt/NVME
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD
