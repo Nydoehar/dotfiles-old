@@ -1,0 +1,32 @@
+### MY ALIASES
+
+alias c='clear && ls --color=auto -Ash --group-directories-first && exec bash'
+alias ca='clear && ls --color=auto -Ssh --group-directories-first && exec bash'
+alias a='cd .. && c'
+alias e='exit'
+
+alias update='yes | apt update && apt upgrade 
+alias search='apt search '
+alias install='apt install '
+alias remove='apt purge '
+
+alias off='sudo shutdown now'
+alias restart='sudo shutdown -r now'
+alias suspend='systemctl suspend'
+
+d() {
+	cd "$1" && c
+}
+
+go() {
+  folder_tofind=$(find . -maxdepth 1 -type d -iname "*$1*" | head -n 1)
+  cd "$folder_tofind"
+  c
+  # Usage: enters the folder containing the TERM you entered.
+  # Usage: go dung < enters the folder Dungeons and Dragons.
+}
+
+alias dv='nv ~/.config/nvim/init.lua && c' 
+alias dh='nv ~/.bash_history && c' 
+alias da='nv ~/.bash_aliases && c' 
+alias dr='nv ~/.bashrc' 
