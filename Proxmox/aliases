@@ -1,3 +1,4 @@
+
 ### MY ALIASES
 
 alias c='clear && ls --color=auto -Ash --group-directories-first && exec bash'
