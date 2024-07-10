@@ -27,6 +27,10 @@ go() {
   # Usage: go dung < enters the folder Dungeons and Dragons.
 }
 
+nv() {
+	nvim "$1" && c 
+}
+
 alias dv='nv ~/.config/nvim/init.lua && c' 
 alias dh='nv ~/.bash_history && c' 
 alias da='nv ~/.bash_aliases && c' 
