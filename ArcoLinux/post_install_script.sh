@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Script to setup a new Arco Linux installationcp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.config/BraveSoftware/.
+# Script to setup a new Arco Linux installation
+
+cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.config/BraveSoftware/.
 
 cp ~/dotfiles/General/.bashrc ~/dotfiles/ArcoLinux/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
