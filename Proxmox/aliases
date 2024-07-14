@@ -6,7 +6,7 @@ alias ca='clear && ls --color=auto -Ssh --group-directories-first && exec bash'
 alias a='cd .. && c'
 alias e='exit'
 
-alias update='yes | apt update && apt upgrade 
+alias update='yes | apt update && apt upgrade '
 alias search='apt search '
 alias install='apt install '
 alias remove='apt purge '
