@@ -18,7 +18,7 @@ timedatectl set-ntp true
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
-sudo dnf remove -y thunderbird
+#sudo dnf remove -y thunderbird
 #sudo dnf install -y vlc neovim timeshift 
 #sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
 #flatpak install flathub --user -y com.brave.Browser
@@ -28,8 +28,8 @@ sudo dnf autoremove -y
 q | systemctl status firewalld
 
 sudo mkdir /mnt/HDD /mnt/NVME
-sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD-1
-sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME-1
+sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD
+sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc
