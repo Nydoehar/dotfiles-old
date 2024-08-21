@@ -40,4 +40,4 @@ distrobox enter --name arch-linux-box
 #cd paru
 #makepkg -si
 
-#paru -S brave vlc timeshift
+#paru -S brave vlc timeshift vscodium
