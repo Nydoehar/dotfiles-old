@@ -3,7 +3,7 @@
 # Script to setup a new Nobara Project installation.
 
 sudo dnf upgrade -y
-sudo dnf install podman distrobox neovim
+sudo dnf install -y podman distrobox neovim
 sudo dnf autoremove -y
 
 cp ~/dotfiles/General/.bashrc ~/dotfiles/Nobara_Project/.bash_aliases ~/
@@ -30,9 +30,14 @@ sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc
 
-cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
 distrobox create --image quay.io/toolbx/arch-toolbox:latest arch_linux_box
 distrobox enter --name arch-linux-box
 
-exec bash
+#sudo pacman -S --needed base-devel
+#git clone https://aur.archlinux.org/paru.git
+#cd paru
+#makepkg -si
+
+#paru -S brave vlc timeshift
