@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to setup a new Fedora installation.
+# Script to setup a new Nobara Project installation.
 
 cp ~/dotfiles/General/.bashrc ~/dotfiles/Nobara_Project/.bash_aliases ~/
 mkdir -p ~/.config/nvim/
@@ -11,19 +11,14 @@ cp ~/dotfiles/Scripts/Wrappers/* ~/.local/bin/
 (cd ~/.local/bin/ && chmod +x *)
 #(cd ~/dotfiles/General/ && dconf load / < Gnome_Settings-Full_Backup)
 mkdir -p ~/.config/autostart
-#mv ~/dotfiles/.desktop_files/transmission-gtk.desktop ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
+mv ~/dotfiles/.desktop_files/com.brave.Browser.desktop ~/.config/autostart/
 rm -rf ~/dotfiles
 
 timedatectl set-ntp true 
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 sudo dnf upgrade -y
-#sudo dnf remove -y thunderbird
-#sudo dnf install -y vlc neovim timeshift 
-#sudo dnf install -y transmission vlc neovim timeshift typescript.noarch make gnome-shell-extension-pop-shell xprop
-#flatpak install flathub --user -y com.brave.Browser
-#flatpak uninstall --unused
-
+sudo dnf install podman distrobox
 sudo dnf autoremove -y
 q | systemctl status firewalld
 
@@ -35,5 +30,7 @@ cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
 cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc
 
 cp -r /mnt/HDD-1/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+
+distrobox create --image quay.io/toolbx/arch-toolbox:latest arch_linux_box
 
 exec bash
