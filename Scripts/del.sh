@@ -1,16 +1,30 @@
 #!/bin/bash
 
-findy=$(find . -maxdepth 1 -iname "*$1*")
+# Set the search pattern based on command-line argument
+pattern="$1"
+
+# Find files matching the pattern in the current directory
+findy=$(find . -maxdepth 1 -iname "*$pattern*")
+
+# Display found files
+echo -e "\n$findy" | nl
+
+# Ask for confirmation to remove files
 echo
-echo "$findy"
-
-read -p 'Remove? [y/N]: ' -n 1 -r 
+read -p 'Remove? [y/N]: ' -n 1 -r
 
 echo
 
-if [ $REPLY = y ]
-then
-  rm -rf "$findy"
+# Process the user's response
+if [ "$REPLY" = y ]; then
+    # Use a while loop to delete each file
+    echo "$findy" | while IFS= read -r file; do
+        echo -e "\nDeleting: $file\n"
+        rm -rf "$file"
+    done
 fi
 
-clear && ls --color=auto -Ash && exec bash
+#sleep 2
+
+# Clear the screen and list the remaining files
+clear && ls --color=auto -Ash --group-directories-first && exec bash
