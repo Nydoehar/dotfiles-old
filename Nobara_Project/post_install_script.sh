@@ -32,7 +32,7 @@ cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc > /d
 
 #cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
-y | distrobox create --image quay.io/toolbx/arch-toolbox:latest arch_linux_box
+yes | distrobox-create --name arch-box --image quay.io/toolbx/arch-toolbox:latest
 distrobox enter --name arch-linux-box
 
 #sudo pacman -S --needed base-devel
