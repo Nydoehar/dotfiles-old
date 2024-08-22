@@ -27,12 +27,12 @@ sudo mkdir /mnt/HDD /mnt/NVME
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD
 sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 
-cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab
-cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc
+cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab > /dev/null
+cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc > /dev/null
 
-cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+#cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
-distrobox create --image quay.io/toolbx/arch-toolbox:latest arch_linux_box
+y | distrobox create --image quay.io/toolbx/arch-toolbox:latest arch_linux_box
 distrobox enter --name arch-linux-box
 
 #sudo pacman -S --needed base-devel
@@ -40,4 +40,4 @@ distrobox enter --name arch-linux-box
 #cd paru
 #makepkg -si
 
-#paru -S brave vlc timeshift vscodium
+#paru -S brave vlc timeshift vscodium syncthing
