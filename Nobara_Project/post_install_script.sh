@@ -35,6 +35,10 @@ cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc > /d
 yes | distrobox-create --name arch-box --image quay.io/toolbx/arch-toolbox:latest
 distrobox enter --name arch-linux-box
 
+#Krohnkite
+#https://store.kde.org/p/2144146/
+
+#yes | sudo pacman -Syu
 #sudo pacman -S --needed base-devel
 #git clone https://aur.archlinux.org/paru.git
 #cd paru
