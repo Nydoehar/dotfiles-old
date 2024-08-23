@@ -33,15 +33,15 @@ cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc > /d
 #cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
 yes | distrobox-create --name arch-box --image quay.io/toolbx/arch-toolbox:latest
-distrobox enter --name arch-linux-box
+distrobox-enter --name arch-box
 
 #Krohnkite
 #https://store.kde.org/p/2144146/
 
-#yes | sudo pacman -Syu
-#sudo pacman -S --needed base-devel
+#sudo pacman -Syu --noconfirm
+#sudo pacman -S --needed --noconfirm base-devel
 #git clone https://aur.archlinux.org/paru.git
 #cd paru
 #makepkg -si
 
-#paru -S brave vlc timeshift vscodium syncthing
+#paru -S --noconfirm brave vlc timeshift vscodium syncthing
