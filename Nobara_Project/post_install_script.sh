@@ -45,3 +45,9 @@ distrobox-enter --name arch-box
 #makepkg -si
 
 #paru -S --noconfirm brave vlc timeshift vscodium syncthing
+
+#distrobox-export --app brave
+#distrobox-export --app vlc
+#distrobox-export --app timeshift
+#distrobox-export --app vscodium
+#distrobox-export --app syncthing
