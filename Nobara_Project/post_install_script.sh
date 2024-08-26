@@ -27,10 +27,10 @@ sudo mkdir /mnt/HDD /mnt/NVME
 sudo mount -t ntfs UUID=2B2F6B4529BC9532 /mnt/HDD
 sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 
-cat /mnt/HDD/MY_STUFF/PC/Dot_Files/fstab_lines | sudo tee -a /etc/fstab > /dev/null
-cat /mnt/HDD/MY_STUFF/PC/Dot_Files/root_aliases | sudo tee -a /root/.bashrc > /dev/null
+cat /mnt/HDD/MY_STUFF/PC/DotFiles/General/fstab_lines | sudo tee -a /etc/fstab > /dev/null
+cat /mnt/HDD/MY_STUFF/PC/DotFiles/General/root_aliases | sudo tee -a /root/.bashrc > /dev/null
 
-#cp -r /mnt/HDD/MY_STUFF/PC/Dot_Files/Brave-Browser ~/.var/app/com.brave.Browser/config/BraveSoftware/
+#cp -r /mnt/HDD/MY_STUFF/PC/DotFiles/Apps/Brave-Browser/Default ~/.var/app/com.brave.Browser/config/BraveSoftware/
 
 yes | distrobox-create --name arch-box --image quay.io/toolbx/arch-toolbox:latest
 distrobox-enter --name arch-box
