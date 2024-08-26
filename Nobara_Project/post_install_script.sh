@@ -30,8 +30,6 @@ sudo mount -t ntfs UUID=6B4FA4C31DAB7943 /mnt/NVME
 cat /mnt/HDD/MY_STUFF/PC/DotFiles/General/fstab_lines | sudo tee -a /etc/fstab > /dev/null
 cat /mnt/HDD/MY_STUFF/PC/DotFiles/General/root_aliases | sudo tee -a /root/.bashrc > /dev/null
 
-#cp -r /mnt/HDD/MY_STUFF/PC/DotFiles/Apps/Brave-Browser/Default ~/.var/app/com.brave.Browser/config/BraveSoftware/
-
 yes | distrobox-create --name arch-box --image quay.io/toolbx/arch-toolbox:latest
 distrobox-enter --name arch-box
 
@@ -48,6 +46,6 @@ distrobox-enter --name arch-box
 
 #distrobox-export --app brave
 #distrobox-export --app vlc
-#distrobox-export --app timeshift
-#distrobox-export --app vscodium
-#distrobox-export --app syncthing
+
+#cp -r /mnt/HDD/MY_STUFF/PC/DotFiles/Apps/syncthing ~/.local/state/
+#cp -r /mnt/HDD/MY_STUFF/PC/DotFiles/Apps/Brave-Browser/Default ~/.var/app/com.brave.Browser/config/BraveSoftware/
