@@ -4,6 +4,6 @@ mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
 cat ~/dotfiles-old/Proxmox/aliases | tee -a ~/.bashrc
 rm -rf ~/dotfiles-old
 
-apt install neovim 
+sudo apt install neovim 
 
 exec bash
