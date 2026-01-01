@@ -11,4 +11,5 @@ sudo dnf update -y && sudo dnf install -y git && git clone https://github.com/Ny
 paru -Sy archlinux-keyring --noconfirm && paru -Syu --noconfirm && yes | paru -S git && git clone https://github.com/Nydoehar/dotfiles-old/ && bash ~/dotfiles-old/ArcoLinux/post_install_script.sh
 
   # Proxmox - Aliases and Neovim
-apt update -y && apt upgrade -y && apt install -y git && git clone https://github.com/Nydoehar/dotfiles-old/ && bash ~/dotfiles-old/Proxmox/post_install_script.sh
+sudo apt update -y && sudo apt upgrade -y && sudo apt install -y git && git clone https://github.com/Nydoehar/dotfiles-old/ && bash ~/dotfiles-old/Proxmox/post_install_script.sh
+
