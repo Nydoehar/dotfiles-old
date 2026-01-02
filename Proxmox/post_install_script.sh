@@ -1,3 +1,4 @@
+sudo chsh -s /bin/bash "$USER_NAME"
 mkdir -p ~/.config/nvim/
 cp ~/dotfiles-old/General/neovim-init.lua ~/.config/nvim/
 mv ~/.config/nvim/neovim-init.lua ~/.config/nvim/init.lua
